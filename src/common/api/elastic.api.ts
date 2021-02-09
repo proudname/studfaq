@@ -1,11 +1,11 @@
 import { Client } from '@elastic/elasticsearch'
 export const elasticClient = new Client({
-  node: 'https://1f18c5271c424f75b06bf6aec8a50830.us-central1.gcp.cloud.es.io:9243',
+  node: process.env.ELACTIC_CLOUD_NODE,
   cloud: {
-    id: 'elastic-enterprise-search-deployment:dXMtY2VudHJhbDEuZ2NwLmNsb3VkLmVzLmlvJDFmMThjNTI3MWM0MjRmNzViMDZiZjZhZWM4YTUwODMwJDYyYzk0N2M4Y2NmNTRiNjI4ZDNiYzM4NTAxYTNiZDlm'
+    id: process.env.ELACTIC_CLOUD_ID
   },
   auth: {
-    username: '_',
-    password: '_'
+    username: process.env.ELACTIC_CLOUD_LOGIN,
+    password: process.env.ELACTIC_CLOUD_PASSWORD
   }
 });
