@@ -1,1 +1,1 @@
-Интеграция с Elastic Search Cloud
+Интеграция с Elastic Cloud
